@@ -49,7 +49,9 @@ achieved.
 The four major steps for evolutionary methods are provided at the following figure. The DE algorithm, like any
 other metaheuristic algorithm, doesn't guarantee that an optimal solution is ever found ([Atashnezhad et al., 2017](https://www.onepetro.org/conference-paper/SPE-185741-MS)).
 
-
+<p align="center">
+  <img width="700" src="assets/Capture.PNG" >
+</p>
 
 
 ### ML algorithm of your choice
