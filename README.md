@@ -77,7 +77,7 @@ Fraud challenge data set
 |   |__ attributed_time
 |   |__ is_attributed
 ```
-Two columns including attributed_time and click_time droped from data set and the rest are used for training a ML algorithm.
+Two columns including **attributed_time** and **click_time** droped from data set and the rest are used for training a ML algorithm.
 
 ### Some handy functions
 ---
@@ -98,7 +98,7 @@ def read_train_test_data_balanced(address_train):
     return df_train
 ```
 
-Usiing above function read all 1 values from the train data set and then add the same number of 0 and keep it. 
+Using above function read all 1 values from the train data set and then add the same number of 0 and keep it. 
 
 ```python
 df_train = read_train_test_data_balanced(address_train)
