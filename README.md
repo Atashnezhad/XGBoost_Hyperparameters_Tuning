@@ -6,7 +6,7 @@
 
 
 In this project, the metaheuristic algorithm is used for tuning machine learning algorithms hyper-parameters. 
-A fraud detection project from the Kaggle challenge is used as a base project. The data set used in this project can be found [here](https://www.kaggle.com/c/talkingdata-adtracking-fraud-detection/data).
+A fraud detection project from the Kaggle challenge is used as a base project. 
 The Project composed of three distinct sections.
 * **Metahurestic Algorithm (MA):** Differential Evolution Algorithm (DEA) selected as an intelligent searching tool. The DE Algorithm is work on top of the ML Algorithm (in this case XGBoost) to find the best set of hyper-parameters.
 * **Machine Learning Algorithm:** The XGBoost which is a powerful machine learning algorithm is selected and the DEA is applied to find the best set of hyper-paratmers.
@@ -64,6 +64,7 @@ Let's use the most Common ML Competition algorithm XGBoost for this project. You
 
 ### Data-set of your choice
 ---
+Let's use the TalkingData set which is available [here](https://www.kaggle.com/c/talkingdata-adtracking-fraud-detection/data) on Kaggle.
 ```
 Fraud challenge data set
 
@@ -78,14 +79,9 @@ Fraud challenge data set
 ```
 
 
-
-
-
-Let's use the TalkingData set which is available on Kaggle.
-
 ### Some handy functions
 ---
-Several function were defined at the begining of the project which help in writing codes. An example is provided at the following.
+Several functions were defined at the begining of the project which help in writing codes more efficient. An example is provided at the following.
 
 ```python
 def read_train_test_data_balanced(address_train):
@@ -93,8 +89,6 @@ def read_train_test_data_balanced(address_train):
     #Read Training data, all class 1 and add same amount 0
     iter_csv = pd.read_csv(address_train, iterator=True, chunksize=10000000, parse_dates=['click_time'])
     df_train_1 = pd.concat([chunk[chunk['is_attributed'] > 0] for chunk in iter_csv])
-    
-    
     iter_csv = pd.read_csv(address_train, iterator=True, chunksize=10000000, parse_dates=['click_time'], skiprows = range(1,120000000), nrows=2000000)
     df_train_0 = pd.concat([chunk[chunk['is_attributed'] == 0] for chunk in iter_csv])
     #seperate same number values as train data with class 1
@@ -104,15 +98,13 @@ def read_train_test_data_balanced(address_train):
     return df_train
 ```
 
-### Preparing a dataset
----
-Make balanced data set. Read all 1 values from the train data set and then add the same number of 0 and keep it. Now we do have a balance data set with an equal number of 0 and 1.
+Usiing above function read all 1 values from the train data set and then add the same number of 0 and keep it. 
 
 ```python
 df_train = read_train_test_data_balanced(address_train)
 df_train.head(3)
 ```
-
+Now we do have a balance data set with an equal number of 0 and 1.
 <div style="text-align:center"><img src="figures/__results___13_0.png" /></div>
 
 ### Run DE Algorithm to find the best XGBoost Algorithm hyper-parameters 
