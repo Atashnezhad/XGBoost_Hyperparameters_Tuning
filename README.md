@@ -24,9 +24,22 @@ Let's use the most Common ML Competition algorithm which is XGBoost.
 
 Let's use the TalkingData set which is available on Kaggle.
 
+### Some handy functions
+---
+
 ### Preparing a dataset
 ---
 Make balanced data set. Read all 1 values from the train data set and then add the same number of 0 and keep it. Now we do have a balance data set with an equal number of 0 and 1.
+
+```python
+df_train = read_train_test_data_balanced(address_train)
+df_train.head(3)
+```
+
+
+
+
+
 
 
 
