@@ -170,7 +170,7 @@ Stopping. Best iteration:
 The model accuracy on test data was found 89%.
 
 ### Recommendations
-* Some data feathering can be helpful.
+* Data feathering can be helpful. The click_time can potentially helps the ML algorithm to seperate between fraud clicks from those that are not. The same procidure can be done, taking the click_time into account.
 * The time can be used as a separate parameter so the best hyper-parameters would result in faster solutions are selected. Without time there is a chance for the DE algorithm to increase the number of max_leaves and max_depth to the upper boundaries which results in a very time-consuming training procedure.
 
 
