@@ -34,8 +34,7 @@ XGBoost_Hyperparameters_Tuning
 ### Searching Algorithm of your choice
 ---
 The DE algorithm is a branch of evolutionary methods developed by [Storn and Price (1997)](https://link.springer.com/article/10.1023/A:1008202821328)
-and it is used to find the 
-optimum solution for extensive, continuous domains. The DE algorithm begins with a population of random
+and it is used to find the optimum solution for extensive, continuous domains. The DE algorithm begins with a population of random
 candidates and it recombines them to improve the fitness of each one iteratively using a simple equation.
 
 Each random pair vectors (X1,X2) give a differential vector (X3 = X2 – X1). The weighted difference vector, X4
@@ -49,6 +48,8 @@ compared to the target vector and it is replaced if it is a better fit. The DE a
 achieved.
 The four major steps for evolutionary methods are provided at the following figure. The DE algorithm, like any
 other metaheuristic algorithm, doesn't guarantee that an optimal solution is ever found ([Atashnezhad et al., 2017](https://www.onepetro.org/conference-paper/SPE-185741-MS)).
+
+
 
 
 ### ML algorithm of your choice
