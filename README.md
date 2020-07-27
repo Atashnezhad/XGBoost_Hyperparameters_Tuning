@@ -77,7 +77,7 @@ Fraud challenge data set
 |   |__ attributed_time
 |   |__ is_attributed
 ```
-
+Two columns including attributed_time and click_time droped from data set and the rest are used for training a ML algorithm.
 
 ### Some handy functions
 ---
@@ -109,23 +109,10 @@ Now we do have a balance data set with an equal number of 0 and 1.
 
 ### Run DE Algorithm to find the best XGBoost Algorithm hyper-parameters 
 ---
-```python
-#Run the DE algorithm on objective function in your favorite range of hyperparameters.
-result = list(De_Algorithm(Objective_Function2,
-                 [(0.001,1),   #  eta
-                  (3,1500),   #  max_leaves
-                  (0,20),   #  max_depth
-                  (0,1),   #  subsample
-                  (0.001,1),   #  colsample_bytree
-                  (0.001,1),   #  colsample_bylevel
-                  (0.001,1),   #  min_child_weight
-                  (2,8),   #  alpha
-                  (1,10),   # scale_pos_weight
-                  (1,10),     # nthread
-                  (1,10)], #  random_state
-                  mut=0.4, crossp=0.8, popsize=10, its=40))
-```
 
+The DE algorithm along with a objective function are called to tune the XGBoost algorithm hyperparameters.
+The Objective fucntion uses XGBoost algorithm along with set of hyperparamters and returns the (1-accuracy) as a fitness value.
+The goal of DE algorithm is to find the hyperparamters that returns the lowest (1-accuracy) value. The hyperparameters ranges are selected at the following. Note that the fitness function does not take the effect of time into account. The user also can define different fitness function as he/she wishes.
 The best hyper XGBoost Algorithm hyper-parameters found as the follow:
 ```
 eta                    0.355402
@@ -144,12 +131,14 @@ Name: 39, dtype: float64
 
 ### Visualization of searching progress
 ---
+Following plot shows the searching progress of agents in the space of solutions.
 
 <div style="text-align:center"><img src="figures/__results___23_0.png" /></div>
 
 
 ### Train XGBoost using best hyperparamters
 ---
+Now that the hyperparameters were found, they are fed into the XGBoost algorithm and the XGBoost is applied for training and testing procedures respectively.
 ```python
 [0]	train-auc:0.969407	valid-auc:0.968665
 Multiple eval metrics have been passed: 'valid-auc' will be used for early stopping.
