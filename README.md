@@ -79,7 +79,31 @@ Name: 39, dtype: float64
 <div style="text-align:center"><img src="figures/__results___23_0.png" /></div>
 
 
+### Train XGBoost using best hyperparamters
+---
+```python
+[0]	train-auc:0.969407	valid-auc:0.968665
+Multiple eval metrics have been passed: 'valid-auc' will be used for early stopping.
 
+Will train until valid-auc hasn't improved in 25 rounds.
+[5]	train-auc:0.975196	valid-auc:0.97457
+[10]	train-auc:0.976906	valid-auc:0.975752
+[15]	train-auc:0.977917	valid-auc:0.97621
+[20]	train-auc:0.978799	valid-auc:0.976472
+[25]	train-auc:0.979276	valid-auc:0.976656
+[30]	train-auc:0.979782	valid-auc:0.976689
+[35]	train-auc:0.980202	valid-auc:0.97673
+[40]	train-auc:0.980494	valid-auc:0.976759
+[45]	train-auc:0.98077	valid-auc:0.976747
+[50]	train-auc:0.981003	valid-auc:0.976796
+[55]	train-auc:0.981273	valid-auc:0.97675
+[60]	train-auc:0.98154	valid-auc:0.976738
+[65]	train-auc:0.981777	valid-auc:0.97674
+[70]	train-auc:0.981938	valid-auc:0.976712
+Stopping. Best iteration:
+[49]	train-auc:0.980968	valid-auc:0.976798
+
+```
 
 
 
