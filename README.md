@@ -36,7 +36,7 @@ df_train = read_train_test_data_balanced(address_train)
 df_train.head(3)
 ```
 
-
+<div style="text-align:center"><img src="figures/__results___13_0.png" /></div>
 
 
 
