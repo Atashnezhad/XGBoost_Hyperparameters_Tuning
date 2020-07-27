@@ -59,16 +59,50 @@ other metaheuristic algorithm, doesn't guarantee that an optimal solution is eve
 
 ### ML algorithm of your choice
 ---
-Let's use the most Common ML Competition algorithm which is XGBoost.
+Let's use the most Common ML Competition algorithm XGBoost for this project. You may choose a different one and replace it into the codes. 
 
 
 ### Data-set of your choice
 ---
+```
+Fraud challenge data set
+
+|__ data/
+|   |__ ip
+|   |__ app
+|   |__ device
+|   |__ os
+|   |__ click_time
+|   |__ attributed_time
+|   |__ is_attributed
+```
+
+
+
+
 
 Let's use the TalkingData set which is available on Kaggle.
 
 ### Some handy functions
 ---
+Several function were defined at the begining of the project which help in writing codes. An example is provided at the following.
+
+```python
+def read_train_test_data_balanced(address_train):
+    
+    #Read Training data, all class 1 and add same amount 0
+    iter_csv = pd.read_csv(address_train, iterator=True, chunksize=10000000, parse_dates=['click_time'])
+    df_train_1 = pd.concat([chunk[chunk['is_attributed'] > 0] for chunk in iter_csv])
+    
+    
+    iter_csv = pd.read_csv(address_train, iterator=True, chunksize=10000000, parse_dates=['click_time'], skiprows = range(1,120000000), nrows=2000000)
+    df_train_0 = pd.concat([chunk[chunk['is_attributed'] == 0] for chunk in iter_csv])
+    #seperate same number values as train data with class 1
+    df_train_0 = df_train_0.head(len(df_train_1))
+    #Merge 0 and 1 data
+    df_train = Merge_data(df_train_1, df_train_0)
+    return df_train
+```
 
 ### Preparing a dataset
 ---
