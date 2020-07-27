@@ -59,17 +59,17 @@ result = list(De_Algorithm(Objective_Function2,
 
 The best hyper XGBoost Algorithm hyper-parameters found as the follow:
 ```
-w1       0.355402
-w2     519.555808
-w3      20.000000
-w4       1.000000
-w5       0.978686
-w6       1.000000
-w7       0.742571
-w8       3.812368
-w9       1.005008
-w10      8.329193
-w11      4.896399
+eta                    0.355402
+max_leaves           520.000000
+max_depth             20.000000
+subsample              1.000000
+colsample_bytree       0.978686
+colsample_bylevel      1.000000
+min_child_weight       1.000000
+alpha                  4.000000
+scale_pos_weight       1.000000
+nthread                8.000000
+random_state           5.000000
 Name: 39, dtype: float64
 ```
 
