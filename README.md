@@ -109,7 +109,7 @@ Stopping. Best iteration:
 ---
 <div style="text-align:center"><img src="figures/__results___32_1.png" /></div>
 
-
+The model accuracy on test data was found 89%.
 
 
 
