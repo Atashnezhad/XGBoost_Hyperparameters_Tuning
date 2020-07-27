@@ -48,7 +48,7 @@ compared to the target vector and it is replaced if it is a better fit. The DE a
 (weighting factor), recombination (crossover factor) and selection steps until a predetermined criteria is
 achieved.
 The four major steps for evolutionary methods are provided at the following figure. The DE algorithm, like any
-other metaheuristic algorithm, doesn't guarantee that an optimal solution is ever found ([Atashnezhad et al., 2017](https://www.onepetro.org/conference-paper/SPE-185741-MS).
+other metaheuristic algorithm, doesn't guarantee that an optimal solution is ever found ([Atashnezhad et al., 2017](https://www.onepetro.org/conference-paper/SPE-185741-MS)).
 
 
 ### ML algorithm of your choice
