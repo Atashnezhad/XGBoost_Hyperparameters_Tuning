@@ -38,12 +38,45 @@ df_train.head(3)
 
 <div style="text-align:center"><img src="figures/__results___13_0.png" /></div>
 
+### Run DE Algorithm to find the best XGBoost Algorithm hyper-parameters 
+---
+```python
+#Run the DE algorithm on objective function in your favorite range of hyperparameters.
+result = list(De_Algorithm(Objective_Function2,
+                 [(0.001,1),   #  eta
+                  (3,1500),   #  max_leaves
+                  (0,20),   #  max_depth
+                  (0,1),   #  subsample
+                  (0.001,1),   #  colsample_bytree
+                  (0.001,1),   #  colsample_bylevel
+                  (0.001,1),   #  min_child_weight
+                  (2,8),   #  alpha
+                  (1,10),   # scale_pos_weight
+                  (1,10),     # nthread
+                  (1,10)], #  random_state
+                  mut=0.4, crossp=0.8, popsize=10, its=40))
+```
 
+The best hyper XGBoost Algorithm hyper-parameters found as the follow:
+```
+w1       0.355402
+w2     519.555808
+w3      20.000000
+w4       1.000000
+w5       0.978686
+w6       1.000000
+w7       0.742571
+w8       3.812368
+w9       1.005008
+w10      8.329193
+w11      4.896399
+Name: 39, dtype: float64
+```
 
+### Visualization of searching progress
+---
 
-
-
-
+<div style="text-align:center"><img src="figures/__results___23_0.png" /></div>
 
 
 
