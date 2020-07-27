@@ -33,6 +33,23 @@ XGBoost_Hyperparameters_Tuning
 
 ### Searching Algorithm of your choice
 ---
+The DE algorithm is a branch of evolutionary methods developed by [Storn and Price (1997)](https://link.springer.com/article/10.1023/A:1008202821328)
+and it is used to find the 
+optimum solution for extensive, continuous domains. The DE algorithm begins with a population of random
+candidates and it recombines them to improve the fitness of each one iteratively using a simple equation.
+
+Each random pair vectors (X1,X2) give a differential vector (X3 = X2 – X1). The weighted difference vector, X4
+= F × X3, is used to perturb the third random vector, X5 using Eqation (X6 = X5 + X4) to achieve the noisy random vector, X6.
+The "F" term is called weighting or scaling factor and it is primarily within the range of 0.5 to 2. The
+weighting factor determines the amplification of differential variation among candidates. A crossover (CR)
+factor regulates the amount of recombinations between candidates. The CR is applied to the noisy random
+vector by taking the target vector into account to achieve the trial vector. The fitness of the trial vector is then
+compared to the target vector and it is replaced if it is a better fit. The DE algorithm repeats the mutation
+(weighting factor), recombination (crossover factor) and selection steps until a predetermined criteria is
+achieved.
+The four major steps for evolutionary methods are provided at the following figure. The DE algorithm, like any
+other metaheuristic algorithm, doesn't guarantee that an optimal solution is ever found ([Atashnezhad et al., 2017](https://www.onepetro.org/conference-paper/SPE-185741-MS)).
+
 
 ### ML algorithm of your choice
 ---
