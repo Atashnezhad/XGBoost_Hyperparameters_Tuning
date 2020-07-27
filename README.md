@@ -33,6 +33,9 @@ XGBoost_Hyperparameters_Tuning
 
 ### Searching Algorithm of your choice
 ---
+In this project the DE algorithm is selected as a inteligent searching tool. You may use your favorite one and replace it into the provided notebook in this project. 
+The DE algorithm code borrowed from [this work](https://pablormier.github.io/2017/09/05/a-tutorial-on-differential-evolution-with-python/#). 
+*We change these codes in another project [here]() and make them to takes several objective functions simultaneously which would be more applicable to broad range of problems.*
 The DE algorithm is a branch of evolutionary methods developed by [Storn and Price (1997)](https://link.springer.com/article/10.1023/A:1008202821328)
 and it is used to find the optimum solution for extensive, continuous domains. The DE algorithm begins with a population of random
 candidates and it recombines them to improve the fitness of each one iteratively using a simple equation.
