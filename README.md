@@ -2,8 +2,15 @@
   <img width="400" src="assets/download.webp" >
 </p>
 
-# Goal
----
+# XGBoost Hyperparameters Tuning using Differential Evolution Algorithm 
+
+
+In this project the metahurestic algorithm is used to tuning machine learning algorithm hyper-paramters. 
+A fraud detection project from Kaggle challange is used as a base project. The data set used in this project can be found [here](https://www.kaggle.com/c/talkingdata-adtracking-fraud-detection/data).
+The Project composed of three distinct sections.
+* Metahurestic algorithm: Differential Evolution Algorithm selected as a inteligent searching tool. The DE Algorithm is work on top of ML Algorithm (in this case XGBoost) to find the best set of hyper-paramters.
+* 
+
 
 In this notebook, we apply the Intelligent search methods like Differential Evolution Algorithm to find the best ML algorithm hyper-parameters. Previous options are using either predetermined or randomly generated parameters for the ML algorithms. Some of these searching methods are actually a simulation of Intelligent agents in nature like the folk of birds or school of fishes.
 
