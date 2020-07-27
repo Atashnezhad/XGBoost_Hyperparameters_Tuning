@@ -169,6 +169,9 @@ Stopping. Best iteration:
 
 The model accuracy on test data was found 89%.
 
+### Recommendations
+* Some data feathering can be helpful.
+* The time can be used as a separate parameter so the best hyper-parameters would result in faster solutions are selected. Without time there is a chance for the DE algorithm to increase the number of max_leaves and max_depth to the upper boundaries which results in a very time-consuming training procedure.
 
 
 [Gif reference](https://giphy.com/gifs/c4d-human-ai-8hYQgBIIHkCPjRTmai).
