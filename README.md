@@ -105,6 +105,11 @@ Stopping. Best iteration:
 
 ```
 
+### Test results distribution 
+---
+<div style="text-align:center"><img src="figures/__results___32_1" /></div>
+
+
 
 
 
