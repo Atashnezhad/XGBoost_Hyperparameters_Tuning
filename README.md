@@ -4,8 +4,6 @@
 
 # XGBoost Hyperparameters Tuning using Differential Evolution Algorithm 
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Atashnezhad/XGBoost_Hyperparameters_Tuning/master)
-
 In this project, the metaheuristic algorithm is used for tuning machine learning algorithms hyper-parameters. 
 A fraud detection project from the Kaggle challenge is used as a base project. 
 The Project composed of three distinct sections.
